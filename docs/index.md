@@ -4,7 +4,8 @@
 
 ## Nội dung cung cấp
 
-- Kiến thức về vẽ mạch [KiCad](kicad/introduction.md)
+- Kiến thức thiết kế mạch sử dụng [KiCad](kicad/introduction.md)
+- Kiến thức thiết kế mạch sử dụng Eagle
 
 ## Bản quyền
 
