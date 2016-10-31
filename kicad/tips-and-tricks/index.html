@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="../../img/logo.png"/>
+
+  
+  <meta name="author" content="Tuan PM">
+  
+  <title>Thủ thuật & mẹo - Thiết kế mạch in và PCB Việt Nam</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  <link rel="stylesheet" href="../../css/custom.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Thủ thuật & mẹo";
+    var mkdocs_page_input_path = "kicad/tips-and-tricks.md";
+    var mkdocs_page_url = "/kicad/tips-and-tricks/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script>
+  <script src="../../js/jquery.cookie-1.4.1.min.js"></script>
+  <script src="../../js/nav.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-60470603-8', 'pcblayout.vn');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Thiết kế mạch in và PCB Việt Nam</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li><ul class="subnav">
+    <li class="">
+        <a class="" href="../.." id="Trang chủ" style="font-size:95%;font-weight:bold;">Trang chủ</a>
+    </li>
+    
+    <li class="paddingtop20"></li>
+</ul>
+<li>
+          
+            <li><ul class="subnav">
+    <li class="current">
+        <a class="current"  id="Nội dung" style="font-size:95%;font-weight:bold;">Nội dung</a>
+    </li>
+    
+        <li class="">
+            <a style="padding-left:50px;" class="" href="../../introduction/" id="Tổng quan"> Tổng quan</a>
+        </li>
+        
+        <div style="display:none" id="hidden_Tổng quan">
+        
+        </div>
+    
+        <li class="current">
+            <a style="padding-left:50px;" class="current"  id="KiCad PCB" onclick="showChildren('KiCad PCB')"> <i class="fa fa-plus-square" style="padding-left:5px;font-size:13px;"></i> KiCad PCB</a>
+        </li>
+        
+        <div style="display:none" id="hidden_KiCad PCB">
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../introduction/" id="Giới thiệu KiCad">  Giới thiệu KiCad </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCad">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../kicad-workflow/" id="Tiến trình làm việc">  Tiến trình làm việc </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việc">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../schematics/" id="Mạch nguyên lý">  Mạch nguyên lý </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lý">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../pcb/" id="Mạch in (PCB)">  Mạch in (PCB) </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../annotation/" id="Đặt tên linh kiện">  Đặt tên linh kiện </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)Đặt tên linh kiện">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../schematic-library/" id="Thư viện nguyên lý">  Thư viện nguyên lý </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)Đặt tên linh kiệnThư viện nguyên lý">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../pcb-library/" id="Thư viện PCB">  Thư viện PCB </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)Đặt tên linh kiệnThư viện nguyên lýThư viện PCB">
+            
+            </div>
+        
+            <li class="current">
+                <a style="padding-left:70px;" class="current" href="./" id="Thủ thuật & mẹo">  Thủ thuật & mẹo </a>
+                <!-- 
+                    <ul>
+                    
+                        <li class="toctree-l3"><a href="#nhung-luu-y-meo-va-nguon-tai-lieu-huu-ich-khac">Những lưu ý, mẹo và nguồn tài liệu hữu ích khác</a></li>
+                        
+                            <li><a class="toctree-l4" href="#1-mach-nguyen-ly">1. Mạch nguyên lý</a></li>
+                        
+                            <li><a class="toctree-l4" href="#2-mach-in">2. Mạch in</a></li>
+                        
+                    
+                    </ul>
+                 -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)Đặt tên linh kiệnThư viện nguyên lýThư viện PCBThủ thuật & mẹo">
+            
+            </div>
+        
+        </div>
+    
+    <li class="paddingtop20"></li>
+</ul>
+<li>
+          
+            <li><ul class="subnav">
+    <li class="">
+        <a class="" href="../../license/" id="Bản quyền" style="font-size:95%;font-weight:bold;">Bản quyền</a>
+    </li>
+    
+    <li class="paddingtop20"></li>
+</ul>
+<li>
+          
+            <li><ul class="subnav">
+    <li class="">
+        <a class="" href="../../contributor/" id="Đóng góp" style="font-size:95%;font-weight:bold;">Đóng góp</a>
+    </li>
+    
+    <li class="paddingtop20"></li>
+</ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Thiết kế mạch in và PCB Việt Nam</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Nội dung &raquo;</li>
+        
+      
+        
+          <li>KiCad PCB &raquo;</li>
+        
+      
+    
+    <li>Thủ thuật & mẹo</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/pcblayout/pcblayout.vn" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="nhung-luu-y-meo-va-nguon-tai-lieu-huu-ich-khac">Những lưu ý, mẹo và nguồn tài liệu hữu ích khác<a class="headerlink" href="#nhung-luu-y-meo-va-nguon-tai-lieu-huu-ich-khac" title="Permanent link">#</a></h1>
+<h2 id="1-mach-nguyen-ly">1. Mạch nguyên lý<a class="headerlink" href="#1-mach-nguyen-ly" title="Permanent link">#</a></h2>
+<ol>
+<li>
+<p>Di chuyển linh kiện với dây nối</p>
+<ul>
+<li>Khi bạn đã nối dây, giữa các linh kiện với nhau, nhưng bổng nhiên bây giờ bạn thấy cần phải di chuyển một linh kiện trong một khối linh kiện để dễ nhìn hơn. Bình thường bạn sẽ chọn linh kiện và nhấn phím &ldquo;m&rdquo; để di chuyển linh kiện đó đên vị trí với, đồng thời bạn xóa đi đường dây cũ đã đi ở vị trí cũ rồi tiến hành đi lại đường nối dây tại vị trị mới.
+Tin vui là bạn không cần phải xóa đường đi dây cũ và đi lại đường dây mới. Phần mềm cho phép bạn di chuyển linh kiện mà vẫn giữ được kết nối đường dây đã đi bằng với phím tắt di chuyển là &ldquo;g&rdquo;, với điều này bạn cũng có thể di chuyển của đường dây đã nối với linh kiện ấy.</li>
+</ul>
+</li>
+<li>
+<p>Chỉnh sửa/cập nhật giá trị linh kiện</p>
+<ul>
+<li>Chỉnh sử giá trị của linh kiện đơn giản hơn nhất là bạn chọn linh kiện và nhấn phím &ldquo;v&rdquo; hoặc </li>
+</ul>
+</li>
+<li>
+<p>Add footprint</p>
+<ul>
+<li>Khi chọn footprint cho các linh kiện của bạn, nếu như có nhiều linh kiện cùng sử dụng chung footprint. Để không lập lại quá trính chọn footprint đó, bạn chỉ cần copy tên của footprint ấy như hình sau
+<img alt="" src="../images/copy_footprint_name.png" /></li>
+</ul>
+<p>Sau đó Past tên footprint đó vào phần tên đường dẫn đến footprint của các linh kiện cùng footprint như hình trên là xong.</p>
+</li>
+</ol>
+<h2 id="2-mach-in">2. Mạch in<a class="headerlink" href="#2-mach-in" title="Permanent link">#</a></h2>
+<ol>
+<li>
+<p>Một số hotkey thường dùng</p>
+<ul>
+<li><strong>Phím x</strong> đi track</li>
+<li><strong>Phím c</strong> về chế độ thường</li>
+<li><strong>Phím v</strong> khoan via</li>
+<li><strong>Phím l</strong> khóa linh kiện, không di chuyển linh kiện được nửa</li>
+<li><strong>Phím n</strong> thay đổi kích thước lưới thiết kế (đi từ trên xuống) </li>
+</ul>
+</li>
+<li>
+<p>KiCad hổ trợ 3 view mode để người dùng có thể đi dây</p>
+<ul>
+<li><strong>Switch Canvas to Legacy</strong> - hotkey <strong>F9</strong></li>
+<li><strong>Switch Canvas to OpenGL</strong> - hotkey <strong>F11</strong></li>
+<li><strong>Switch Canvas to Cairo</strong> - hotkey <strong>F12</strong>
+Sau khi tìm hiểu, và dùng thì mình thấy view mode <strong>Switch Canvas to Cairo</strong> khá hay, nó giúp mình đi dây được dễ dàng hơn, và đặt biệt việc chỉnh sửa vô cũng thích thú vì nó hổ trợ chỉnh sửa trên một track/via đồng thời nó sẽ tự động chỉnh sửa những track/via xung quanh nếu đường track/via mình đang chỉnh sửa tác động đến các track/via bên cạnh.</li>
+</ul>
+</li>
+<li>
+<p>Việc chọn view mode để đi dây, đồng thời chọn <img alt="" src="../images/icons/contrast_mode.png" /><strong>High contrast display mode</strong> ở phía dưới góc trái hoặc <strong>nhấn phím h</strong> sẽ giúp bạn phát huy tối đa trong việc thiết kế PCB. Vì ở <strong>High contrast display mode</strong> sẽ giúp bạn chỉ nhìn thấy <strong>layer</strong> hiện tại của bạn đang dùng và nó sẽ làm mờ đi các layer còn lại.</p>
+</li>
+<li>
+<p>Thỉnh thoảng vì lý do gì đó mà chuột bạn chạy mất kiểm soát khiến bạn không còn thấy vùng PCB mình đang thiết kế nửa thì bạn dùng <img alt="" src="../images/icons/zoom_fit_in_page.png" />  hoặc nhấn phím <strong>home</strong> để quay lại vùng thiêt kế PCB của mình.</p>
+</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../license/" class="btn btn-neutral float-right" title="Bản quyền">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../pcb-library/" class="btn btn-neutral" title="Thư viện PCB"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2016 <a href="https://pcblayout.vn">PCB Layout Việt Nam</a></p>
+    
+  </div>
+
+  
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<!-- <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/pcblayout/pcblayout.vn" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../pcb-library/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../license/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div> -->
+
+<script type="text/javascript">
+  // If cookie is defined toggle the id
+  if (typeof $.cookie('docToggle') !== 'undefined') {
+      // Parse cookie which is an array
+      var _parsed_cookie = JSON.parse($.cookie('docToggle'));
+      // Loop over array and show hidden divs
+      $.each(_parsed_cookie, function(index, value) {
+          // Toggle
+          $("[id='hidden_" + value + "']").css('display','');
+      })
+  }
+</script>
+
+</body>
+</html>

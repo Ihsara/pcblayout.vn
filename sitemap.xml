@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>https://pcblayout.vn/</loc>
+     <lastmod>2016-10-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>https://pcblayout.vn/introduction/</loc>
+     <lastmod>2016-10-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://pcblayout.vn</loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>https://pcblayout.vn/license/</loc>
+     <lastmod>2016-10-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>https://pcblayout.vn/contributor/</loc>
+     <lastmod>2016-10-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+</urlset>

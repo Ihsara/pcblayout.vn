@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="../../img/logo.png"/>
+
+  
+  <meta name="author" content="Tuan PM">
+  
+  <title>Thư viện nguyên lý - Thiết kế mạch in và PCB Việt Nam</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  <link rel="stylesheet" href="../../css/custom.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Thư viện nguyên lý";
+    var mkdocs_page_input_path = "kicad/schematic-library.md";
+    var mkdocs_page_url = "/kicad/schematic-library/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script>
+  <script src="../../js/jquery.cookie-1.4.1.min.js"></script>
+  <script src="../../js/nav.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-60470603-8', 'pcblayout.vn');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Thiết kế mạch in và PCB Việt Nam</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li><ul class="subnav">
+    <li class="">
+        <a class="" href="../.." id="Trang chủ" style="font-size:95%;font-weight:bold;">Trang chủ</a>
+    </li>
+    
+    <li class="paddingtop20"></li>
+</ul>
+<li>
+          
+            <li><ul class="subnav">
+    <li class="current">
+        <a class="current"  id="Nội dung" style="font-size:95%;font-weight:bold;">Nội dung</a>
+    </li>
+    
+        <li class="">
+            <a style="padding-left:50px;" class="" href="../../introduction/" id="Tổng quan"> Tổng quan</a>
+        </li>
+        
+        <div style="display:none" id="hidden_Tổng quan">
+        
+        </div>
+    
+        <li class="current">
+            <a style="padding-left:50px;" class="current"  id="KiCad PCB" onclick="showChildren('KiCad PCB')"> <i class="fa fa-plus-square" style="padding-left:5px;font-size:13px;"></i> KiCad PCB</a>
+        </li>
+        
+        <div style="display:none" id="hidden_KiCad PCB">
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../introduction/" id="Giới thiệu KiCad">  Giới thiệu KiCad </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCad">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../kicad-workflow/" id="Tiến trình làm việc">  Tiến trình làm việc </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việc">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../schematics/" id="Mạch nguyên lý">  Mạch nguyên lý </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lý">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../pcb/" id="Mạch in (PCB)">  Mạch in (PCB) </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../annotation/" id="Đặt tên linh kiện">  Đặt tên linh kiện </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)Đặt tên linh kiện">
+            
+            </div>
+        
+            <li class="current">
+                <a style="padding-left:70px;" class="current" href="./" id="Thư viện nguyên lý">  Thư viện nguyên lý </a>
+                <!-- 
+                    <ul>
+                    
+                        <li class="toctree-l3"><a href="#6-tao-thu-vien-nguyen-ly-trong-kicad">6. Tạo thư viện nguyên lý trong KiCad</a></li>
+                        
+                            <li><a class="toctree-l4" href="#61-lam-chinh-sua-thu-vien-linh-kien">6.1 Làm, chỉnh sửa thư viện linh kiện</a></li>
+                        
+                            <li><a class="toctree-l4" href="#62-chinh-sua-thu-vien">6.2 Chỉnh sửa thư viện</a></li>
+                        
+                    
+                    </ul>
+                 -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)Đặt tên linh kiệnThư viện nguyên lý">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../pcb-library/" id="Thư viện PCB">  Thư viện PCB </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)Đặt tên linh kiệnThư viện nguyên lýThư viện PCB">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../tips-and-tricks/" id="Thủ thuật & mẹo">  Thủ thuật & mẹo </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)Đặt tên linh kiệnThư viện nguyên lýThư viện PCBThủ thuật & mẹo">
+            
+            </div>
+        
+        </div>
+    
+    <li class="paddingtop20"></li>
+</ul>
+<li>
+          
+            <li><ul class="subnav">
+    <li class="">
+        <a class="" href="../../license/" id="Bản quyền" style="font-size:95%;font-weight:bold;">Bản quyền</a>
+    </li>
+    
+    <li class="paddingtop20"></li>
+</ul>
+<li>
+          
+            <li><ul class="subnav">
+    <li class="">
+        <a class="" href="../../contributor/" id="Đóng góp" style="font-size:95%;font-weight:bold;">Đóng góp</a>
+    </li>
+    
+    <li class="paddingtop20"></li>
+</ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Thiết kế mạch in và PCB Việt Nam</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Nội dung &raquo;</li>
+        
+      
+        
+          <li>KiCad PCB &raquo;</li>
+        
+      
+    
+    <li>Thư viện nguyên lý</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/pcblayout/pcblayout.vn" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="6-tao-thu-vien-nguyen-ly-trong-kicad">6. Tạo thư viện nguyên lý trong KiCad<a class="headerlink" href="#6-tao-thu-vien-nguyen-ly-trong-kicad" title="Permanent link">#</a></h1>
+<p>Nếu như, bạn tìm khắp mọi nơi mà không thấy thư viên linh kiện cần dùng hay muốn tạo lại linh kiện theo ý muốn mình, gu sở thích của bản thân thì phải làm sao ? Tất cả sẽ được giải đáp trong phần này.</p>
+<h2 id="61-lam-chinh-sua-thu-vien-linh-kien">6.1 Làm, chỉnh sửa thư viện linh kiện<a class="headerlink" href="#61-lam-chinh-sua-thu-vien-linh-kien" title="Permanent link">#</a></h2>
+<ol>
+<li>
+<p>Chúng ta trở lại của sổ Eeschma. Tại đây, bạn đưa mắt tập chung vào giữa cửa sổ Eeschma, rồi từ từ nhẹ nhàng đưa ánh mắt đi lên, bạn sẽ bắt gặp icon <a href="../images/icons/libedit.png">Library Editor</a> <img alt="" src="../images/icons/libedit.png" />. Click vào icon <a href="../images/icons/libedit.png">Library Editor</a>, bạn sẽ được đưa tới một không gian mới mọng mơ, nơi mà bạn sẽ tiếp tục thể hiện năng khiếu vẽ thiên bẩm của mình.
+<img alt="" src="../images/Library_Editor.png" /></p>
+</li>
+<li>
+<p>Việc chỉnh lưới làm việc, hay chọn đơn vị <a href="../images/icons/unit_mm.png">mm</a> <img alt="" src="../images/icons/unit_mm.png" />, <a href="../images/icons/unit_inch.png">In</a> <img alt="" src="../images/icons/unit_inch.png" /> được thao tác như ở phần vẽ sơ đồ nguyên lý hay sơ đồ mạch in.</p>
+</li>
+<li>
+<p>Bạn còn nhớ linh kiện 3 chân, mà chúng ta đã gặp ở <a href="../schematics/">Thiết kế nguyên lý</a> chứ. Chúng ta sẽ thực hành tạo nó nhé.</p>
+</li>
+<li>
+<p>Để bắt đầu tạo linh kiện mới bạn kích vào icon <a href="../images/icons/add_component.pngzoo">New component</a> <img alt="" src="../images/icons/add_component.pngzoo" /> ở thanh công cụ nằng ngang phía trên.
+<img alt="" src="../images/component_properties.png" /></p>
+</li>
+<li>
+<p>Cửa sổ <a href="../images/component_properties.png">Component Properties</a> hiện ra như ở trên. Tao tiến hành đặt tên linh kiện là MYCONN3 ở ô <a href="../images/component_properties.png">Component Name</a>, điền J vào <a href="../images/component_properties.png">Default reference designator</a> và <a href="../images/component_properties.png">Number of parts per package</a> là 1. Rồi kích OK</p>
+</li>
+<li>
+<p>Đưa mắt nhìn qua thanh công cụ bên tay phải, và kích vào icon <a href="../images/icons/add_component.pngzoo">Add rectangle</a> <img alt="" src="../images/icons/add_component.pngzoo" /> và thực hiện vẽ thân hình cho linh kiện của chúng ta. </p>
+</li>
+<li>
+<p>Cũng trên thanh công cụ bên tay phải, kích vào icon <a href="../images/icons/pin.png">Add Pins</a> <img alt="" src="../images/icons/pin.png" /> để tạo các chân cho linh kiện của chúng ta.</p>
+</li>
+<li>
+<p>Sau khi kích vào icon <a href="../images/icons/pin.png">Add Pins</a> <img alt="" src="../images/icons/pin.png" />, di chuyển chuột ra không gian thiết kế và kích vào đó, hợp thoại Pin Properties hiện lên
+<img alt="" src="../images/pin_properties.png" /></p>
+</li>
+<li>
+<p>Đặt tên chân <a href="../images/pin_properties_vcc.png">Pin name</a> là VCC, chân số <a href="../images/pin_properties_vcc.png">Pin Number</a> là 1, và <a href="../images/pin_properties_vcc.png">Electrical type</a> là Passive và OK.
+<img alt="" src="../images/pin_properties_vcc.png" /></p>
+</li>
+<li>
+<p>Tìm vị trí phù hợp với thân của linh kiện để đặt</p>
+</li>
+<li>
+<p>Làm tương tự với hai chân còn lại của linh kiện</p>
+<ul>
+<li>Pin name : INPUT, Pin number: 2, Electrical Type: Passive</li>
+<li>Pin name : GND, Pin number: 3, Electrical Type: Passive</li>
+</ul>
+</li>
+<li>
+<p>Kết quả sẽ trông giống giống thế như sau
+<img alt="" src="../images/gsik_myconn3_l.png" /></p>
+</li>
+<li>
+<p>Lưu linh kiện vừa tạo vào thư viện, bằng cách kích vào icon <a href="../images/icons/new_library.png">New Library</a> <img alt="" src="../images/icons/new_library.png" />. Chọn vị trí lưu thư viện và nhấn SAVE</p>
+</li>
+<li>
+<p>Để có thể nhìn thấy linh kiện vừa tạo ở phần tìm kiến linh kiện trong mạch nguyên lý, bạn cần phải add thư viện vừa tạo vào. Bằng các trên thanh menu chọn Preferences → Component Libraries, nhấn vào ADD để chọn đường dẫn đến nơi chứa thư viện bạn vừa tạo ở cả <a href="../images/add_Component_Libraries.png">User defined search path</a> và <a href="../images/add_Component_Libraries.png">Component library files</a>, rồi chọn OK.
+<a href="../images/add_Component_Libraries.png"></a></p>
+</li>
+<li>
+<p>Cập nhất thư viện vừa tạo bằng việc click vào icon <a href="../images/icons/save_part_in_mem.png">Update current component in current library</a> <img alt="" src="../images/icons/save_part_in_mem.png" /> ở thanh toolbar phía trên.</p>
+</li>
+<li>
+<p>Cuối cùng lưu tất cả thay đổi với cái click vào icon <a href="../images/icons/save_library.png">Save current loaded library on disk</a> <img alt="" src="../images/icons/save_library.png" /></p>
+</li>
+</ol>
+<h2 id="62-chinh-sua-thu-vien">6.2 Chỉnh sửa thư viện<a class="headerlink" href="#62-chinh-sua-thu-vien" title="Permanent link">#</a></h2>
+<p>Có những linh kiện tạo sẳn, mà chỉ cần chỉnh sửa đôi chút trên nó là có thể trở thành linh kiện mới mà bạn muốn có. Và cách làm thật đơn giản như sau</p>
+<ol>
+<li>
+<p>Cũng trong của sổ <img alt="Library Editor" src="../images/Library_Editor.png" />, click vào icon <a href="../images/icons/import.png">Import component</a> <img alt="" src="../images/icons/import.png" />, chọn đường dẫn đến thư viện mà bạn muốn chỉnh sửa làm thư viện của bạn.</p>
+</li>
+<li>
+<p>Chỉnh sửa thư viện trên thành thư viện theo ý muốn của bạn và thực hiện lưu, add, và update thư viện như làm ở phần 6.1 trên</p>
+</li>
+<li>
+<p>Perfect ! Còn cả các phần rất thú vị như</p>
+</li>
+<li><a href="../pcb-library/">Tạo thư viện chân PCB</a></li>
+<li><a href="../tips-and-tricks/">Những lưu ý, mẹo và nguồn tài liệu hữu ích khác</a></li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../pcb-library/" class="btn btn-neutral float-right" title="Thư viện PCB">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../annotation/" class="btn btn-neutral" title="Đặt tên linh kiện"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2016 <a href="https://pcblayout.vn">PCB Layout Việt Nam</a></p>
+    
+  </div>
+
+  
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<!-- <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/pcblayout/pcblayout.vn" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../annotation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../pcb-library/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div> -->
+
+<script type="text/javascript">
+  // If cookie is defined toggle the id
+  if (typeof $.cookie('docToggle') !== 'undefined') {
+      // Parse cookie which is an array
+      var _parsed_cookie = JSON.parse($.cookie('docToggle'));
+      // Loop over array and show hidden divs
+      $.each(_parsed_cookie, function(index, value) {
+          // Toggle
+          $("[id='hidden_" + value + "']").css('display','');
+      })
+  }
+</script>
+
+</body>
+</html>

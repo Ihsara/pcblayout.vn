@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="../../img/logo.png"/>
+
+  
+  <meta name="author" content="Tuan PM">
+  
+  <title>Giới thiệu KiCad - Thiết kế mạch in và PCB Việt Nam</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  <link rel="stylesheet" href="../../css/custom.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Giới thiệu KiCad";
+    var mkdocs_page_input_path = "kicad/introduction.md";
+    var mkdocs_page_url = "/kicad/introduction/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script>
+  <script src="../../js/jquery.cookie-1.4.1.min.js"></script>
+  <script src="../../js/nav.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-60470603-8', 'pcblayout.vn');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Thiết kế mạch in và PCB Việt Nam</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li><ul class="subnav">
+    <li class="">
+        <a class="" href="../.." id="Trang chủ" style="font-size:95%;font-weight:bold;">Trang chủ</a>
+    </li>
+    
+    <li class="paddingtop20"></li>
+</ul>
+<li>
+          
+            <li><ul class="subnav">
+    <li class="current">
+        <a class="current"  id="Nội dung" style="font-size:95%;font-weight:bold;">Nội dung</a>
+    </li>
+    
+        <li class="">
+            <a style="padding-left:50px;" class="" href="../../introduction/" id="Tổng quan"> Tổng quan</a>
+        </li>
+        
+        <div style="display:none" id="hidden_Tổng quan">
+        
+        </div>
+    
+        <li class="current">
+            <a style="padding-left:50px;" class="current"  id="KiCad PCB" onclick="showChildren('KiCad PCB')"> <i class="fa fa-plus-square" style="padding-left:5px;font-size:13px;"></i> KiCad PCB</a>
+        </li>
+        
+        <div style="display:none" id="hidden_KiCad PCB">
+        
+            <li class="current">
+                <a style="padding-left:70px;" class="current" href="./" id="Giới thiệu KiCad">  Giới thiệu KiCad </a>
+                <!-- 
+                    <ul>
+                    
+                        <li class="toctree-l3"><a href="#1-gioi-thieu-kicad">1. Giới thiệu KiCad</a></li>
+                        
+                            <li><a class="toctree-l4" href="#11-tai-va-cai-at-kicad">1.1. Tải và cài đặt KiCad</a></li>
+                        
+                    
+                    </ul>
+                 -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCad">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../kicad-workflow/" id="Tiến trình làm việc">  Tiến trình làm việc </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việc">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../schematics/" id="Mạch nguyên lý">  Mạch nguyên lý </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lý">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../pcb/" id="Mạch in (PCB)">  Mạch in (PCB) </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../annotation/" id="Đặt tên linh kiện">  Đặt tên linh kiện </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)Đặt tên linh kiện">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../schematic-library/" id="Thư viện nguyên lý">  Thư viện nguyên lý </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)Đặt tên linh kiệnThư viện nguyên lý">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../pcb-library/" id="Thư viện PCB">  Thư viện PCB </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)Đặt tên linh kiệnThư viện nguyên lýThư viện PCB">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../tips-and-tricks/" id="Thủ thuật & mẹo">  Thủ thuật & mẹo </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)Đặt tên linh kiệnThư viện nguyên lýThư viện PCBThủ thuật & mẹo">
+            
+            </div>
+        
+        </div>
+    
+    <li class="paddingtop20"></li>
+</ul>
+<li>
+          
+            <li><ul class="subnav">
+    <li class="">
+        <a class="" href="../../license/" id="Bản quyền" style="font-size:95%;font-weight:bold;">Bản quyền</a>
+    </li>
+    
+    <li class="paddingtop20"></li>
+</ul>
+<li>
+          
+            <li><ul class="subnav">
+    <li class="">
+        <a class="" href="../../contributor/" id="Đóng góp" style="font-size:95%;font-weight:bold;">Đóng góp</a>
+    </li>
+    
+    <li class="paddingtop20"></li>
+</ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Thiết kế mạch in và PCB Việt Nam</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Nội dung &raquo;</li>
+        
+      
+        
+          <li>KiCad PCB &raquo;</li>
+        
+      
+    
+    <li>Giới thiệu KiCad</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/pcblayout/pcblayout.vn" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="1-gioi-thieu-kicad">1. Giới thiệu KiCad<a class="headerlink" href="#1-gioi-thieu-kicad" title="Permanent link">#</a></h1>
+<p>KiCad là một công cụ phần mềm thiết kế mạch nguyên lý và mạch in (PCB) trong lĩnh vực điện tử mã nguồn mở. Bên trong phần hệ thống phần mềm KiCad là những phần mềm chạy độc lập như sau:</p>
+<table>
+<thead>
+<tr>
+<th>Tên chương trình</th>
+<th>Mô tả</th>
+<th>Đuôi mở rộng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KiCad</td>
+<td>Chương trình quản lý dự án KiCad</td>
+<td>*.pro</td>
+</tr>
+<tr>
+<td>Eeschema</td>
+<td>Chương trình vẽ mạch (cả mạch nguyên lý và thư viện nguyên lý)</td>
+<td><em>.sch, </em>.lib, *.net</td>
+</tr>
+<tr>
+<td>CvPcb</td>
+<td>Lựa chọn thư viện chân Footprint</td>
+<td>*.net</td>
+</tr>
+<tr>
+<td>Pcbnew</td>
+<td>Chương trình vẽ mạch in PCB</td>
+<td>*.kicad_pcb</td>
+</tr>
+<tr>
+<td>GerbView</td>
+<td>Gerber viewer</td>
+<td>All the usual gerbers</td>
+</tr>
+<tr>
+<td>Bitmap2Component</td>
+<td>Chương trình chuyển Bitmap thành PCB hay thư viện chân Footprint</td>
+<td><em>.lib, </em>.kicad_mod, *.kicad_wks</td>
+</tr>
+<tr>
+<td>PCB Calculator</td>
+<td>Tính toán cho linh kiện, độ rộng đường mạch, khoảng hở, mã màu &hellip;</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Pl Editor</td>
+<td>Page layout editor</td>
+<td>*.kicad_wks</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note</strong> Danh sách file mở rộng trên chưa đầy đủ và chỉ chứa một phần các tập tin mà KiCad có thể làm việc, như vậy sẽ đơn giản và dễ nắm bắt hơn.</p>
+</blockquote>
+<p>KiCad có thể đảm bảo độ tin cậy để phát triển thành công những sản phẩm điện tử phức tạp.</p>
+<p>KiCad không giới hạn kích thước board mạch và dễ dàng sử dụng để thiết kế mạch lên tới 32 lớp, tới 14 lớp kỹ thuật và 4 lớp bổ trợ. KiCad có thể tạo tất cả các file cần thiết cho việc tạo nên tấm PCB, Gerber file cho máy Photo-Plotter (máy tạo Film chế bản), file khoan (drl hay NC), vị trí linh kiện (phục vụ SMT - cắm linh kiện bằng máy) và nhiều loại khác.</p>
+<p>Bằng việc mở mã nguồn (giấy phép GPL), KiCad chính là công cụ lý tưởng cho các dự án có ý định mở mã nguồn phần cứng.</p>
+<p>Trang chủ KiCad là: <a href="http://wwww.kicad-pcb.org">http://wwww.kicad-pcb.org</a></p>
+<h2 id="11-tai-va-cai-at-kicad">1.1. Tải và cài đặt KiCad<a class="headerlink" href="#11-tai-va-cai-at-kicad" title="Permanent link">#</a></h2>
+<p>KiCad có thể chạy trên GNU/Linux, Apple OSX và Windows, bạn có thể tìm bản cài đặt phù hợp tại:
+<a href="http://www.kicad-pcb.org/download/">http://www.kicad-pcb.org/download/</a></p>
+<blockquote>
+<p><strong>Warning</strong> KiCad cho ra các phiên bản mới theo <a href="http://ci.kicad-pcb.org/job/kicad-doxygen/ws/Documentation/doxygen/html/md_Documentation_development_stable-release-policy.html">chính sách xuất bản</a>. Những tính năng mới liên tục được cập nhật vào nhánh development. Nếu bạn muốn trải nghiệm những tính năng mới đó và kiểm nghiệm giúp KiCad, hãy tải bản biên dịch nightly cho hệ điều hành của bạn. Bản biên dịch Nightly có khả năng có nhiều lỗi phát sinh, nhưng mục tiêu chính của Nhóm phát triển KiCad là luôn giữ cho nhánh Development trong trạng thái thử nghiệm, cho tới khi nào các tính năng được kiểm nghiệm hoàn chỉnh.</p>
+</blockquote>
+<h3 id="12-gnulinux">1.2. GNU/Linux<a class="headerlink" href="#12-gnulinux" title="Permanent link">#</a></h3>
+<h4 id="ban-cai-at-on-inh">Bản cài đặt ổn định<a class="headerlink" href="#ban-cai-at-on-inh" title="Permanent link">#</a></h4>
+<p>Bản cài đặt ổn định KiCad có thể tìm thấy tại hầu hết các trình quản lý gói cài đặt của bản phân phối Linux với tên gọi <code>kicad</code> và <code>kicad-doc</code>. Nếu bản phân phối của bạn không cung cấp bản cài đặt ổn định mới nhất, vui lòng làm theo hướng dẫn biên dịch, lựa chọn và cài đặt cho bản cài đặt chưa ổn định, nhưng lựa chọn bản ổn định, mới nhất.</p>
+<h4 id="ban-cai-at-chua-on-inh-nightly-developement">Bản cài đặt chưa ổn định (Nightly developement)<a class="headerlink" href="#ban-cai-at-chua-on-inh-nightly-developement" title="Permanent link">#</a></h4>
+<p>Hầu hết đều được biên dịch từ mã nguồn mới nhất. Thỉnh thoảng xuất hiện các lỗi như hỏng file, tạo gerber sai, &hellip; nhưng luôn có tính năng mới nhất.</p>
+<p>Ở hệ điều hành Ubuntu, cách dễ nhất cài bản nightly build là sử dụng <em>PPA</em> và <em>Aptitude</em>. Thực hiện các lệnh sau trong Terminal:</p>
+<pre><code class="shell">sudo add-apt-repository ppa:js-reynaud/ppa-kicad
+sudo aptitude update &amp;&amp; sudo aptitude safe-upgrade
+sudo aptitude install kicad kicad-doc-en
+</code></pre>
+
+<p>Với Fedora, cách dễ nhất thông qua <em>copr</em></p>
+<pre><code class="shell">sudo dnf copr enable mangelajo/kicad
+sudo dnf install kicad
+</code></pre>
+
+<p>Ngoài ra, có thể tải và cài đặt bản biên dịch trước của KiCad, hoặc tải trực tiếp mã nguồn, biên dịch và cài đặt</p>
+<h3 id="13-apple-os-x">1.3. Apple OS X<a class="headerlink" href="#13-apple-os-x" title="Permanent link">#</a></h3>
+<h4 id="ban-cai-at-on-inh_1">Bản cài đặt ổn định<a class="headerlink" href="#ban-cai-at-on-inh_1" title="Permanent link">#</a></h4>
+<p>Có thể tìm thấy <a href="http://downloads.kicad-pcb.org/osx/stable/">http://downloads.kicad-pcb.org/osx/stable/</a></p>
+<h4 id="ban-cai-at-chua-on-inh-nightly-developement_1">Bản cài đặt chưa ổn định (Nightly developement)<a class="headerlink" href="#ban-cai-at-chua-on-inh-nightly-developement_1" title="Permanent link">#</a></h4>
+<p>Tải và cài đặt tại: <a href="http://downloads.kicad-pcb.org/osx/nightly/">http://downloads.kicad-pcb.org/osx/nightly/</a></p>
+<h3 id="14-windows">1.4. Windows<a class="headerlink" href="#14-windows" title="Permanent link">#</a></h3>
+<h4 id="ban-cai-at-on-inh_2">Bản cài đặt ổn định<a class="headerlink" href="#ban-cai-at-on-inh_2" title="Permanent link">#</a></h4>
+<p>Tải và cài đặt: <a href="http://downloads.kicad-pcb.org/windows/stable/">http://downloads.kicad-pcb.org/windows/stable/</a></p>
+<h4 id="ban-cai-at-chua-on-inh-nightly-developement_2">Bản cài đặt chưa ổn định (Nightly developement)<a class="headerlink" href="#ban-cai-at-chua-on-inh-nightly-developement_2" title="Permanent link">#</a></h4>
+<p>Tải và cài đặt: <a href="http://downloads.kicad-pcb.org/windows/nightly/">http://downloads.kicad-pcb.org/windows/nightly/</a></p>
+<h3 id="15-thong-tin-ho-tro">1.5. Thông tin hỗ trợ<a class="headerlink" href="#15-thong-tin-ho-tro" title="Permanent link">#</a></h3>
+<p>Nếu bạn có ý tưởng, nhận xét hay bất kỳ câu hỏi nào, hay cần trợ giúp:
+- Ghé thăm <a href="https://forum.kicad.info/">diễn đàn</a>
+- Tham gia <a href="http://webchat.freenode.net/?channels=kicad">kênh #kicad IRC</a> trên Freenode
+- Xem các <a href="http://kicad-pcb.org/help/tutorials/">hướng dẫn</a></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../kicad-workflow/" class="btn btn-neutral float-right" title="Tiến trình làm việc">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../introduction/" class="btn btn-neutral" title="Tổng quan"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2016 <a href="https://pcblayout.vn">PCB Layout Việt Nam</a></p>
+    
+  </div>
+
+  
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<!-- <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/pcblayout/pcblayout.vn" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../../introduction/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../kicad-workflow/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div> -->
+
+<script type="text/javascript">
+  // If cookie is defined toggle the id
+  if (typeof $.cookie('docToggle') !== 'undefined') {
+      // Parse cookie which is an array
+      var _parsed_cookie = JSON.parse($.cookie('docToggle'));
+      // Loop over array and show hidden divs
+      $.each(_parsed_cookie, function(index, value) {
+          // Toggle
+          $("[id='hidden_" + value + "']").css('display','');
+      })
+  }
+</script>
+
+</body>
+</html>

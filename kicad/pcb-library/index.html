@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="../../img/logo.png"/>
+
+  
+  <meta name="author" content="Tuan PM">
+  
+  <title>Thư viện PCB - Thiết kế mạch in và PCB Việt Nam</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  <link rel="stylesheet" href="../../css/custom.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Thư viện PCB";
+    var mkdocs_page_input_path = "kicad/pcb-library.md";
+    var mkdocs_page_url = "/kicad/pcb-library/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script>
+  <script src="../../js/jquery.cookie-1.4.1.min.js"></script>
+  <script src="../../js/nav.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-60470603-8', 'pcblayout.vn');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Thiết kế mạch in và PCB Việt Nam</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li><ul class="subnav">
+    <li class="">
+        <a class="" href="../.." id="Trang chủ" style="font-size:95%;font-weight:bold;">Trang chủ</a>
+    </li>
+    
+    <li class="paddingtop20"></li>
+</ul>
+<li>
+          
+            <li><ul class="subnav">
+    <li class="current">
+        <a class="current"  id="Nội dung" style="font-size:95%;font-weight:bold;">Nội dung</a>
+    </li>
+    
+        <li class="">
+            <a style="padding-left:50px;" class="" href="../../introduction/" id="Tổng quan"> Tổng quan</a>
+        </li>
+        
+        <div style="display:none" id="hidden_Tổng quan">
+        
+        </div>
+    
+        <li class="current">
+            <a style="padding-left:50px;" class="current"  id="KiCad PCB" onclick="showChildren('KiCad PCB')"> <i class="fa fa-plus-square" style="padding-left:5px;font-size:13px;"></i> KiCad PCB</a>
+        </li>
+        
+        <div style="display:none" id="hidden_KiCad PCB">
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../introduction/" id="Giới thiệu KiCad">  Giới thiệu KiCad </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCad">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../kicad-workflow/" id="Tiến trình làm việc">  Tiến trình làm việc </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việc">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../schematics/" id="Mạch nguyên lý">  Mạch nguyên lý </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lý">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../pcb/" id="Mạch in (PCB)">  Mạch in (PCB) </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../annotation/" id="Đặt tên linh kiện">  Đặt tên linh kiện </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)Đặt tên linh kiện">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../schematic-library/" id="Thư viện nguyên lý">  Thư viện nguyên lý </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)Đặt tên linh kiệnThư viện nguyên lý">
+            
+            </div>
+        
+            <li class="current">
+                <a style="padding-left:70px;" class="current" href="./" id="Thư viện PCB">  Thư viện PCB </a>
+                <!-- 
+                    <ul>
+                    
+                        <li class="toctree-l3"><a href="#7-tao-thu-vien-chan-pcb">7. Tạo thư viện chân PCB</a></li>
+                        
+                    
+                        <li class="toctree-l3"><a href="#71-tu-tao-footprint">7.1 Tự tạo footprint</a></li>
+                        
+                    
+                    </ul>
+                 -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)Đặt tên linh kiệnThư viện nguyên lýThư viện PCB">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../tips-and-tricks/" id="Thủ thuật & mẹo">  Thủ thuật & mẹo </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)Đặt tên linh kiệnThư viện nguyên lýThư viện PCBThủ thuật & mẹo">
+            
+            </div>
+        
+        </div>
+    
+    <li class="paddingtop20"></li>
+</ul>
+<li>
+          
+            <li><ul class="subnav">
+    <li class="">
+        <a class="" href="../../license/" id="Bản quyền" style="font-size:95%;font-weight:bold;">Bản quyền</a>
+    </li>
+    
+    <li class="paddingtop20"></li>
+</ul>
+<li>
+          
+            <li><ul class="subnav">
+    <li class="">
+        <a class="" href="../../contributor/" id="Đóng góp" style="font-size:95%;font-weight:bold;">Đóng góp</a>
+    </li>
+    
+    <li class="paddingtop20"></li>
+</ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Thiết kế mạch in và PCB Việt Nam</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Nội dung &raquo;</li>
+        
+      
+        
+          <li>KiCad PCB &raquo;</li>
+        
+      
+    
+    <li>Thư viện PCB</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/pcblayout/pcblayout.vn" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="7-tao-thu-vien-chan-pcb">7. Tạo thư viện chân PCB<a class="headerlink" href="#7-tao-thu-vien-chan-pcb" title="Permanent link">#</a></h1>
+<p>Tương tự như trong mạch nguyên lý, thỉnh thoảng bạn cũng sẽ thích tạo ra một thư viện footprint do tự tay mình tao, hay chỉnh sửa một footprint có sẳn. Trong phần này bạn sẽ biết cơ bản để làm những điều trên.</p>
+<h1 id="71-tu-tao-footprint">7.1 Tự tạo footprint<a class="headerlink" href="#71-tu-tao-footprint" title="Permanent link">#</a></h1>
+<ol>
+<li>Từ cửa sổ Pcbnew, click vào icon Open Footprint Editor <img alt="" src="../images/icons/module_editor.png" /> phía trên thanh toolbar. Bạn sẽ mở được cánh cửa bí mật vào thế giới để thiết kế footprint của KiCad.</li>
+</ol>
+<p><img alt="" src="../images/footprint_design.png" /></p>
+<ol>
+<li>
+<p>Việc chỉnh lưới làm việc, hay chọn đơn vị <a href="../images/icons/unit_mm.png">mm</a> <img alt="" src="../images/icons/unit_mm.png" />, <a href="../images/icons/unit_inch.png">In</a> <img alt="" src="../images/icons/unit_inch.png" />, di chuyển, phóng to nhỏ được thao tác như ở phần vẽ sơ đồ nguyên lý hay sơ đồ mạch in đã làm.</p>
+</li>
+<li>
+<p>Trên thanh công cụ phía trên có icon <a href="../images/icons/new_footprint.png">New Footprint</a> <img alt="" src="../images/icons/new_footprint.png" />, một cửa sổ nhỏ hiện ra để bạn đặt tên cho footprint của mình. Sau khi đặt xong tên, nhấn OK.</p>
+</li>
+<li>
+<p>Nếu bạn muốn lựa chọn các thông số cho Pad linh kiện trước, bạn thực hiện <a href="../images/pad_setting.png">Dimensions → Pad sitting</a>. Cửa sổ Pad Properties hiện ra
+<img alt="" src="../images/pad_setting.png" /></p>
+</li>
+<li>
+<p>Cửa sổ Pad Properties có các thông số cơ bản thường dùng như :</p>
+<ul>
+<li>Pad number : số thứ tự của Pad</li>
+<li>Pad type : nơi chọn lụa kiều Pad</li>
+<li>Shape : nơi chọn lựa hình dáng Pad</li>
+<li>Positiong X : vị trí của Pad theo tọa độ X</li>
+<li>Positiong Y : vị trí của Pad theo tọa độ Y</li>
+<li>Size X : chiều dài</li>
+<li>Size Y : chiều rộng</li>
+<li>Phần Drill : dùng khi Pad type là Through-hole</li>
+<li>Phần Layer : Lựa chọn các Layer có tác dụng</li>
+</ul>
+</li>
+<li>
+<p>Sau khi điều chỉnh các thông số ở trên thích hợp, rồi chọn OK. Ta lấy Pad của linh kiện bằng việc click vào icon <a href="../images/icons/pad.png">Add Pads</a> <img alt="" src="../images/icons/pad.png" /> ở thanh công cụ bên tay phải. Sau đó di chuyển con trỏ ra phần thiết kế footprint để đặt Pad linh kiện.</p>
+</li>
+<li>
+<p>Để đặt Pad đúng với khoảng cách được mô tả trong datasheet của linh kiện mà không có sai soát, chúng ta nên click đúp vào từng Pad rồi gõ vị trí X, Y tương ứng ở Positiong X, Positiong Y trong cửa sổ <a href="../images/icons/new_footprint.png">Pad Properties</a>.</p>
+</li>
+<li>
+<p>Để mô tả rõ hình dáng của linh kiên trong footprint, bạn có thể click vào các icon sau ở thanh công cụ bên phải của cửa sổ Pad Properties</p>
+<ul>
+<li><a href="../images/icons/add_polygon.png">Add graphic line or polygon</a> <img alt="" src="../images/icons/add_polygon.png" /> </li>
+<li><a href="../images/icons/add_arc.png">Add graphic arc</a> <img alt="" src="../images/icons/add_arc.png" /></li>
+<li><a href="../images/icons/add_circle.png">Add graphic circle</a> <img alt="" src="../images/icons/add_circle.png" /></li>
+</ul>
+</li>
+<li>
+<p>Sao khi vẽ xong đường bao - hay còn gọi là phần thân của linh kiện. Chúng ta sẽ bước qua bước lưu footprint.</p>
+</li>
+<li>
+<p>Trước tiên add footprint mà chúng ta vừa mới tạo vào một nhóm cùng, để sau này chúng ta dễ tìm kiếm hơn. Thực hiện điều đó bằng cái click vào icon <a href="../images/icons/open_library.png">Select active library</a> <img alt="" src="../images/icons/open_library.png" /> ở góc trái phía trên trong công cụ, rồi chọn nhóm footprint cần add.</p>
+</li>
+<li>
+<p>Tiếp theo là lưu footprint lại với icon <a href="../images/icons/add_polygon.png">Save Footprint in Active Library</a> <img alt="" src="../images/icons/add_polygon.png" /> nằm góc trái của thanh công cụ phía trên (kế bên icon <a href="../images/icons/open_library.png">Select active library</a> <img alt="" src="../images/icons/open_library.png" />) hoặc đơn giản hơn dùng tổ hợp phím <a href="">Ctrl + s</a></p>
+</li>
+<li>
+<p>Và bây giơ chúng ta cần load footprint vừa tạo được lên để có thể lấy dùng ở Pcbnew mỗi lần vẽ mạch. Vào <a href="./">Preferences → Footprint Library Wizard</a>, hợp thoại <a href="./">Add Footprint Library Wizard</a>, tích chọn <a href="./">Files on my computer → Next → Chọn Folder chứa footprint → Next → Next </a>. Tại bước này sẽ có hợp thoại hỏi bạn muốn chọn dùng footprint đó CHỈ ở dự án đang làm hay là dùng cho TẤT CẢ các dự án. Tích chọn kiểu một trong hai yêu cầu trên và Finish.</p>
+</li>
+<li>
+<p>Bạn cũng có thể cập nhận footprint bất cứ khi nào bạn cần ở giao diện Pcbnew với cách làm tương tự trên.</p>
+</li>
+<li>
+<p>Có thêm footprint vào, tức cũng sẽ có bỏ footprint ra. Bằng việc tích vào <a href="../images/PCB_Library_tables.png">Preferences → Footprint Library Manager</a>, cửa sổ nhỏ PCB library Tables xuất hiện
+<img alt="" src="../images/PCB_Library_tables.png" /></p>
+</li>
+<li>
+<p>Tại tab <a href="../images/PCB_Library_tables.png">Global Libraries</a> sẽ cho bạn biết các thư viện mà có thể dùng ở tất cả các dự án trên KiCad. Còn tab <a href="../images/PCB_Library_tables.png">Project Specific Libraries</a> là nói chứa các thư viện footprint CHỈ dùng riêng cho dự án hiện hành.</p>
+</li>
+<li>
+<p>cửa sổ PCB library Tables này, bạn muốn xóa thư viện footprint nào, bạn chọn thư viện đó và tích vào <a href="../images/PCB_Library_tables.png">Remove Library</a>.</p>
+</li>
+<li>
+<p>Hoàn thành tới đây, tức là bạn đã có thể vẽ được mạch với Kicad một cách dễ dàng. Tuy nhiên còn một phần nửa không kém thú vị là</p>
+</li>
+<li><a href="../tips-and-tricks/">Những lưu ý, mẹo và nguồn tài liệu hữu ích khác</a></li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tips-and-tricks/" class="btn btn-neutral float-right" title="Thủ thuật & mẹo">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../schematic-library/" class="btn btn-neutral" title="Thư viện nguyên lý"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2016 <a href="https://pcblayout.vn">PCB Layout Việt Nam</a></p>
+    
+  </div>
+
+  
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<!-- <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/pcblayout/pcblayout.vn" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../schematic-library/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../tips-and-tricks/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div> -->
+
+<script type="text/javascript">
+  // If cookie is defined toggle the id
+  if (typeof $.cookie('docToggle') !== 'undefined') {
+      // Parse cookie which is an array
+      var _parsed_cookie = JSON.parse($.cookie('docToggle'));
+      // Loop over array and show hidden divs
+      $.each(_parsed_cookie, function(index, value) {
+          // Toggle
+          $("[id='hidden_" + value + "']").css('display','');
+      })
+  }
+</script>
+
+</body>
+</html>

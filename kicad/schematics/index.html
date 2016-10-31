@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="../../img/logo.png"/>
+
+  
+  <meta name="author" content="Tuan PM">
+  
+  <title>Mạch nguyên lý - Thiết kế mạch in và PCB Việt Nam</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  <link rel="stylesheet" href="../../css/custom.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Mạch nguyên lý";
+    var mkdocs_page_input_path = "kicad/schematics.md";
+    var mkdocs_page_url = "/kicad/schematics/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script>
+  <script src="../../js/jquery.cookie-1.4.1.min.js"></script>
+  <script src="../../js/nav.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-60470603-8', 'pcblayout.vn');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Thiết kế mạch in và PCB Việt Nam</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li><ul class="subnav">
+    <li class="">
+        <a class="" href="../.." id="Trang chủ" style="font-size:95%;font-weight:bold;">Trang chủ</a>
+    </li>
+    
+    <li class="paddingtop20"></li>
+</ul>
+<li>
+          
+            <li><ul class="subnav">
+    <li class="current">
+        <a class="current"  id="Nội dung" style="font-size:95%;font-weight:bold;">Nội dung</a>
+    </li>
+    
+        <li class="">
+            <a style="padding-left:50px;" class="" href="../../introduction/" id="Tổng quan"> Tổng quan</a>
+        </li>
+        
+        <div style="display:none" id="hidden_Tổng quan">
+        
+        </div>
+    
+        <li class="current">
+            <a style="padding-left:50px;" class="current"  id="KiCad PCB" onclick="showChildren('KiCad PCB')"> <i class="fa fa-plus-square" style="padding-left:5px;font-size:13px;"></i> KiCad PCB</a>
+        </li>
+        
+        <div style="display:none" id="hidden_KiCad PCB">
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../introduction/" id="Giới thiệu KiCad">  Giới thiệu KiCad </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCad">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../kicad-workflow/" id="Tiến trình làm việc">  Tiến trình làm việc </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việc">
+            
+            </div>
+        
+            <li class="current">
+                <a style="padding-left:70px;" class="current" href="./" id="Mạch nguyên lý">  Mạch nguyên lý </a>
+                <!-- 
+                    <ul>
+                    
+                        <li class="toctree-l3"><a href="#3-ve-so-o-mach">3. Vẽ sơ đồ mạch</a></li>
+                        
+                    
+                    </ul>
+                 -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lý">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../pcb/" id="Mạch in (PCB)">  Mạch in (PCB) </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../annotation/" id="Đặt tên linh kiện">  Đặt tên linh kiện </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)Đặt tên linh kiện">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../schematic-library/" id="Thư viện nguyên lý">  Thư viện nguyên lý </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)Đặt tên linh kiệnThư viện nguyên lý">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../pcb-library/" id="Thư viện PCB">  Thư viện PCB </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)Đặt tên linh kiệnThư viện nguyên lýThư viện PCB">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../tips-and-tricks/" id="Thủ thuật & mẹo">  Thủ thuật & mẹo </a>
+                <!--  -->
+            </li>
+            
+            <div style="display:none" id="hidden_KiCad PCBGiới thiệu KiCadTiến trình làm việcMạch nguyên lýMạch in (PCB)Đặt tên linh kiệnThư viện nguyên lýThư viện PCBThủ thuật & mẹo">
+            
+            </div>
+        
+        </div>
+    
+    <li class="paddingtop20"></li>
+</ul>
+<li>
+          
+            <li><ul class="subnav">
+    <li class="">
+        <a class="" href="../../license/" id="Bản quyền" style="font-size:95%;font-weight:bold;">Bản quyền</a>
+    </li>
+    
+    <li class="paddingtop20"></li>
+</ul>
+<li>
+          
+            <li><ul class="subnav">
+    <li class="">
+        <a class="" href="../../contributor/" id="Đóng góp" style="font-size:95%;font-weight:bold;">Đóng góp</a>
+    </li>
+    
+    <li class="paddingtop20"></li>
+</ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Thiết kế mạch in và PCB Việt Nam</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Nội dung &raquo;</li>
+        
+      
+        
+          <li>KiCad PCB &raquo;</li>
+        
+      
+    
+    <li>Mạch nguyên lý</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/pcblayout/pcblayout.vn" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="3-ve-so-o-mach">3. Vẽ sơ đồ mạch<a class="headerlink" href="#3-ve-so-o-mach" title="Permanent link">#</a></h1>
+<p>Trong phần này chúng ta sẽ biết cách làm thế nào để vẽ một sơ đồ mạch điện sử dụng KiCad</p>
+<ol>
+<li>
+<p>Trên Windown chạy kicad.exe hoặc kích vào icon phần mềm KiCad. Tương tự trên Linux mở Terminal và gõ <a href="./">kicad</a> hoặc cũng có thể kích đúp vào icon kicad đã được tạo ở desktop hay thanh công cụ.
+Sau khi thực hiện thao tác trên, ta sẽ thấy giao diện KiCad xuất hiện. Từ đâu bạn có thể thấy tám công cụ phần mềm đọc lập của KiCad: Eeschema, Schematic Library Editor, Pcbnew, PCB Footprint Editor, GerbView, Bitmap2Component, PCB Calculator và Pl Editor. Như ở <a href="../kicad-workflow/">2.1. Tổng quan tiến trình làm việc</a> sẽ cho bạn biết cách sử dụng các công cụ chính để làm việc.
+    <img alt="" src="../images/kicad_main_window.png" /></p>
+</li>
+<li>
+<p>Để hiểu hơn, bây giờ chúng ta cùng nhau tạo một dự án mới: <a href="./">File → New Project → New Project</a>. Với trên của dự án là &rdquo; tutorial1 &ldquo;, vào bây giờ phần mềm sẽ tự tạo một file dự án với đuôi là &ldquo;.pro&rdquo;. KiCad sẽ nhắc nhở bạn &rdquo; bạn có chắc là muốn tạo dự án nguy hiểm này chứ (hjhj&hellip;)&rdquo;. Nếu bạn đã sẳn sàng thì phiêu lưu thì chỉ cần kích &ldquo;YES&rdquo; để đồng ý. Tất cả các file của dự án của bạn sẽ được lưu tại đây.</p>
+</li>
+<li>
+<p>Việc đầu tiên là ta sẽ đi tạo một nơi mà ta có thể vẽ sơ đồ nguyên lý, và đó chính là <img alt="" src="../images/icons/eeschema.png" /> Eeschma.</p>
+</li>
+<li>
+<p>Bạn có thể chỉnh kích thước của Eeschma theo ý muốn của mình tại biểu tượng <a href="../images/icons/sheetset.png">Page Settings</a> <img alt="" src="../images/icons/sheetset.png" /> ở đầu của thanh toolbar. Chọn kích thước bạn muốn, đồng thời bạn cũng sẽ thấy có nhiều thông tin khác mà bạn muốn điền vào để mô tả rõ dự án của mình hơn. Rồi kích OK. Cũng tương tự như các phần mềm vẽ mạch khác, để lưu sơ đồ nguyên lý của dự án bạn vào <a href="./">File → Save Schematic Project</a> hoặc chỉ đơn giản là <a href="./">CTRL + S</a> là xong.</p>
+</li>
+<li>
+<p>Bây giờ chúng ta sẽ đi lấy những linh kiện đầu tiên cho dự án của chúng ta, bằng cách kích vào biểu tượng Place component <img alt="" src="../images/icons/add_component.png" /> ở giữa cửa sổ dự án của chúng ta. Tuy nhiên, có cách nhanh hơn đó là dùng <a href="./">phím tắt (a)</a>.</p>
+<p>NOTE : còn nhiều phím tắt khác mà bạn có thể dùng bằng cách <a href="./">Help → List Hotkey</a></p>
+</li>
+<li>
+<p>Bây giờ của sổ lựa chọn linh kiện hiện ra, ta <a href="./">gõ R</a> để lấy điện trở, linh kiện hiện ra như hình sau
+    <img alt="" src="../images/choose_component.png" /></p>
+</li>
+<li>
+<p>Kích đúp vào biểu tượng điện trở, sau đó của sổ để lấy linh kiện sẽ ẩn đi, và âm thầm theo dõi bạn làm việc, và nó cũng sẽ sẳn sàng hiện ra ngay lập tức bất cứ khi nào bạn gọi tên nó ( bằng cách gõ &ldquo;a&rdquo; ). Bây giờ chị là việc lựa chọn vị trí đắt địa để đặt điện trở.</p>
+</li>
+<li>
+<p>Trong quá trình lựa chọn vị trí đắt địa, bạn muốn nhìn thấy vị trí đẹp trong khuôn khổ của trang, bạn chỉ cần kích vào biểu tượng phóng to <img alt="" src="../images/icons/zoom_in.png" /> hoặc thu nhỏ <img alt="" src="../images/icons/zoom_out.png" />. Hiệu quả nhất là bạn dùng con lăn của chuột - nếu có.</p>
+</li>
+<li>
+<p>Nếu bạn muốn xoay điện trở theo hướng khác thì chỉ cần bạn trỏ chuột vào điện trở và <a href="./">nhấn phím &ldquo;r&rdquo;</a>. Muốn di chuyển tới vị trí thoáng mát, đẹp hơn chỉ cần trỏ chuột vào điện trở và <a href="./">nhấn phím &ldquo;m&rdquo;</a>.</p>
+</li>
+<li>
+<p>Như bạn thấy linh kiện điện trở của chúng ta xuất hiện hai chữ là <a href="./">R?</a>- <a href="./">dấu hỏi</a> ở đây là để biết <a href="./">linh kiện điện trở thứ mấy</a> trong mạch, cái này sẽ được tự động làm trong tích tắt với một nút lên có sẳn. 
+Chữ thứ hai là <a href="./">R</a> để ta chỉnh sửa thành <a href="./">giá trị của điện trở</a> bằng cách trỏ chuột vào chữ <a href="./">R</a> đó và <a href="./">nhấn phím &ldquo;e&rdquo;</a> hoặc bạn kích chuột phải vào điện trở và làm theo như hình sau để ghi giá trị của điện trở<br />
+<img alt="" src="../images/edit_component_dropdown.png" /></p>
+</li>
+<li>
+<p>Cửa sỗ giá trị linh kiện xuất hiện, gõ giá trị linh kiện và kích <a href="./">OK</a> ta được như hình sau
+    <img alt="" src="../images/resistor_value.png" /></p>
+</li>
+<li>
+<p>Để lấy thêm linh kiện ta thực hiện lại động tác như đã nói ở trên là <a href="./">gõ phím &ldquo;a&rdquo;</a>. Nhưng lần này bạn sẽ phẻ hơn là không cần gõ tên của điện trở nửa mà chương trình đã tự động nhớ tên linh kiện của bạn đã dùng và chỉ việc chọn lại và sắp đặt linh kiện mà thôi.
+    <img alt="" src="../images/component_history.png" /></p>
+</li>
+<li>
+<p>Nếu như bạn muốn xóa linh kiện, chỉ cần chọn linh kiện muốn xóa và <a href="./">nhấn phím &ldquo;delete&rdquo;</a>. Hoặc kích chuột phải vào linh kiện và chọn<a href="./">&ldquo;Delete Component&rdquo;</a></p>
+</li>
+<li>
+<p>Một câu hỏi đặt ra là, bây giờ trong mạch bạn có tới 20 con điện trợ hay thậm chí nhiều hơn nửa thì bạn cứ nhấn &ldquo;a&rdquo; hoài sao ?
+Không các bạn ạ, chương trình cho phép ta thực hiện tất cả thao tác &rdquo; nhấn phím a và chọn linh kiện&rdquo; bằng cách copy linh kiện ấy không tới một nốt nhạc bằng cách <a href="./">chọn linh kiên cần copy và nhấn phím &ldquo;c&rdquo;</a></p>
+</li>
+<li>
+<p>Đôi khi các chân của linh kiện được thiết kế ở các lưới khác nhau - khoảng cách các chân, và bạn muốn thay đổi lưới làm việc cho phù hợp bằng cách kích chuột phải vào không gian đang làm việc và chọn <a href="./">Grid select</a> phù hợp. Để hiện/ẩn lưới <img alt="" src="../images/icons/grid.png" /> làm việc cũng như lựa chọn đơn vị là <a href="../images/icons/unit_mm.png">mm</a> <img alt="" src="../images/icons/unit_mm.png" /> hoặc <a href="../images/icons/unit_inch.png">In</a> <img alt="" src="../images/icons/unit_inch.png" /> bạn chỉ cần kích vào các biểu được đó ở thanh công cụ phía bên trái của trang đang làm việc.</p>
+</li>
+<li>
+<p>Trong quá trình tìm linh kiện để làm mạch, nhưng thư viện của KiCad không có và bạn tải thư viện đó về và muốn thêm linh kiện đó vào để sử dụng thì từ menu của cửa sổ Eeschma, chọn <a href="./">Preferences → Component Libraries</a> và chọn nút <a href="./">Add</a> để dẫn đến file chứa thư viện.</p>
+</li>
+<li>
+<p>Quay trở lại với dự án của chúng ta, bây giờ cũng các tương tự như lấy điện trở, ta lấy LED và PIC12C508A-I/SN, và đặt như sau:
+    <img alt="" src="../images/gsik_tutorial1_010.png" /></p>
+</li>
+<li>
+<p>Ta cần thêm một kết nối 3 chân như sau:
+    <img alt="" src="../images/gsik_myconn3_s.png" /></p>
+</li>
+<li>
+<p>Nếu không có sẳn bạn có thể tham khảo ở <a href="../schematic-library/">Tạo thư viện nguyên lý</a> để tạo một linh kiên.</p>
+</li>
+<li>
+<p>Tiếp theo ta các thành phần của nguồn như VCC, VDD, GND bằng cách kích vào biểu tượng <img alt="" src="../images/icons/add_power.png" /> ở thanh công cụ bên tay trái, hoặc bạn cũng có để làm như lấy các linh kiện trước. Và sau đó ta sắp xếp, được như sau:
+    <img alt="" src="../images/gsik_tutorial1_020.png" /></p>
+</li>
+<li>
+<p>Bây giờ ta tiến hành kết nối dây. Kích vào biểu tượng <img alt="" src="../images/icons/add_line.png" /> hoặc dùng phìm tắt <a href="./">w</a>.</p>
+</li>
+<li>
+<p>Ở các đầu chân của linh kiện sẽ có các vòng tròn, bạn chỉ cần nối các vòng tròn đó giữa các đầu dây mà bạn muốn nối.
+    <img alt="" src="../images/circle_pin.png" /></p>
+</li>
+<li>
+<p>Sau khi nối dây ta được như hình sau:
+    <img alt="" src="../images/gsik_tutorial1_040.png" /></p>
+</li>
+<li>
+<p>Bây giờ ta sẽ kết nối linh kiện với nhau bằng cách dùng labels. Kích vào biểu tượng <a href="../images/icons/add_line_label.png">Place net name</a> <img alt="" src="../images/icons/add_line_label.png" /> ở thanh công cụ phía tay phải, và chọn vị trí đặt. Sau đó hợp thoại xuất hiện, để ta gõ tên cho label. Như hình sau:
+    <img alt="" src="../images/gsik_tutorial1_050.png" /></p>
+</li>
+<li>
+<p>Như ta thấy hình trên, các chân 2,3,4,5 của PIC không sử dụng. Và nếu ta để trống như thế, khi chạy kiểm tra KiCad sẽ có những cảnh báo. Để tránh những cảnh báo này, ta kích vào biểu tượng <a href="../images/icons/noconn.png">Place no connect flag</a> <img alt="" src="../images/icons/noconn.png" /> ở thanh công cụ phía tay phải và đặt chúng tại chân 2, 3, 4, và 5 của PIC.</p>
+<p><img alt="" src="../images/gsik_tutorial1_060.png" /></p>
+</li>
+<li>
+<p>Có thể một vài linh kiện sẽ có những chân bị ẩn đi, và để thấy  những chân đó, bạn kích vào biểu tượng <a href="../images/icons/hidden_pin.png"> Show hidden pins </a> <img alt="" src="../images/icons/hidden_pin.png" />ở thanh công cụ phía bên tay trái.</p>
+</li>
+<li>
+<p>Vậy nếu bạn muốn viết chú thích hay tâm sự thì phải làm sao ? Ah há, đã có <a href="../images/icons/add_text.png">Lace graphic text </a> <img alt="" src="../images/icons/add_text.png" />.</p>
+</li>
+<li>
+<p>Bây giờ mạch của ta đã đầy đủ tất cả các linh kiện. Và công việc tiếp theo là bạn phải đánh số thứ tự cho các linh kiện. Bạn có thể làm bằng tay, từng cái một theo ý muốn của bạn, hay sẽ để tự động chương trình làm với <a href="../images/icons/annotate.png">Annotate schematic</a> <img alt="" src="../images/icons/annotate.png" />. Hợp thoại xuất hiện, chọn Use the entire schematic, và kích vào Annotation → OK → Close. Kết quả là các linh kiện đã được đánh số.</p>
+</li>
+<li>
+<p>Bây giờ đê chắc chắn rằng sơ đồ mạch nguyên lý của ta không có lỗi, click vào biểu tượng <a href="../images/icons/erc.png">Perform electrical rules check</a> <img alt="" src="../images/icons/erc.png" /> trên thanh công tự trên cùng. Chọn <a href="./">Run</a>, nếu có lỗi chương trình sẽ báo cho bạn những lỗi đó và cũng sẽ tạo các Maskers chỉ cho bạn thấy các vị trí đó trên sơ đồ của bạn.</p>
+</li>
+<li>
+<p>Công việc tiếp theo là add footprint cho các linh kiện. Chọn linh kiện các add footprint và nhấn phím <a href="./">f</a>, hợp thoại xuất hiện và chọn <a href="./">Select</a>. Hợp thoại mới, có chứa các footprint của linh kiên - tên, kiểu chân, và mô tả. Sau một hoài tìm kiếm, bạn sẽ tìm thấy được footprint cho linh kiện của mình, một cách dễ dàng. Khi đã thấy footprint cần tìm, bạn chỉ cần nhấn đúp vào tên của footprint đó là xong. Và tương tự cho đến hết.</p>
+</li>
+<li>
+<p>Cuối cùng ta tạo file Netlist, file này giúp chúng ta ghi lại các kết nối chân đã nối, các footprint đã add cho từng linh kiện của ta, và chuyển đổi những điều đó sang mạch PCB.
+Click vào biểu tượng <a href="../images/icons/netlist.png">Generate netlist</a> <img alt="" src="../images/icons/netlist.png" /> trên thanh công cụ ở chính giữa của cửa sổ sơ đồ mạch nguyên lý của chúng ta. Một của sổ Netlist xuất hiện chọn <a href="./">Pcbnew → Generate → Save</a></p>
+</li>
+<li>
+<p>Ta chuyển sang <a href="../pcb/">Vẽ mạch in</a></p>
+</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../pcb/" class="btn btn-neutral float-right" title="Mạch in (PCB)">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../kicad-workflow/" class="btn btn-neutral" title="Tiến trình làm việc"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2016 <a href="https://pcblayout.vn">PCB Layout Việt Nam</a></p>
+    
+  </div>
+
+  
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<!-- <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/pcblayout/pcblayout.vn" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../kicad-workflow/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../pcb/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div> -->
+
+<script type="text/javascript">
+  // If cookie is defined toggle the id
+  if (typeof $.cookie('docToggle') !== 'undefined') {
+      // Parse cookie which is an array
+      var _parsed_cookie = JSON.parse($.cookie('docToggle'));
+      // Loop over array and show hidden divs
+      $.each(_parsed_cookie, function(index, value) {
+          // Toggle
+          $("[id='hidden_" + value + "']").css('display','');
+      })
+  }
+</script>
+
+</body>
+</html>
