@@ -1,0 +1,14 @@
+
+sudo: false
+language: python
+python: '3.5'
+env:
+  global:
+    secure: QjTkgULE7QpM/bOIbPkVa8WoKVlQeYeuSj2Lervy0QBBchzDTWhJ/aGi/62wDlOs1NqL3+BTItIcUTY+trCQqqTfF4B/swc3lVUfah/Grr7u9VYcsZfYejo3kGC/acg62HnKTeASJwLAT3PA3LpBt+TQ4LCrMcf3QiUgo3l3orbcTqpOfPrIctfHgs4wQTmPvZXJuOhLvQuQIn7PmdsEwnKJytfE4oxg1+TLFDDhY+xk0iH4Q+2rqaEirnnFYKrFKuK1PgNwvk1/V5hDTuf8bjnyiVya2eU7qkILKJgg0OsMj7GGH79NM6Q0twS683pWTMSMPpxfK2d9Jh6O8VGZuxbX0RIzZ97H6nOS1YHZ3oXY5gRM7qTcw4rbrvzcnOrJyBrGTXuLo+DUdpcwtkB/TiLW86EGNtVLzRta7+s95ZkVjQYD6vAGMozyhEqyZD4l7JYh1Lckp7M9ZMAOx50bliCDnnrZ+UdsANKZTx26m9n97XKT7iw/4ob6AGiPAGl/okSvL3NT+2hALtuisufcH9SgG42/yk4qAqcDbOglh+i63NjLVrV0Z9tF3ejga2rGET0fWU53xzQCIY8ua+AJiGVz97xECro4MLad5ECsRabbnV3Td662TDTZcUG5Pc8kdF3nTWtNhHZEvreWpo5X/1yS/NhmfPRHTqThGbqXBNU=
+script:
+- git config user.name "tuanpmt"
+- git config user.email "tuanpm@live.com"
+- git remote add gh-token "https://${GH_TOKEN}@github.com/pcblayout/pcblayout.vn.git"
+- git fetch gh-token && git fetch gh-token gh-pages:gh-pages
+- pip install mkdocs -U
+- mkdocs gh-deploy -v --clean --remote-name gh-token

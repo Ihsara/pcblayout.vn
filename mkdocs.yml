@@ -1,0 +1,33 @@
+site_name: Thiết kế mạch in và PCB Việt Nam
+site_url: https://pcblayout.vn
+site_description: PCB Layout Việt Nam
+#theme: readthedocs
+site_author: Tuan PM
+theme_dir: readthedocshm
+copyright: Copyright &copy; 2016 <a href="https://pcblayout.vn">PCB Layout Việt Nam</a>
+markdown_extensions:
+    - toc:
+        permalink: '#'
+    - admonition
+    - smarty
+repo_name: GitHub
+repo_url: https://github.com/pcblayout/pcblayout.vn
+google_analytics: ['UA-60470603-8', 'pcblayout.vn']
+
+# Page tree
+pages:
+  - Trang chủ:                      index.md
+  - Nội dung:
+    - Tổng quan:                    introduction.md
+    - KiCad PCB:
+      - Giới thiệu KiCad:           kicad/introduction.md
+      - Tiến trình làm việc:        kicad/kicad-workflow.md
+      - Mạch nguyên lý:             kicad/schematics.md
+      - Mạch in (PCB):              kicad/pcb.md
+      - Đặt tên linh kiện:          kicad/annotation.md
+      - Thư viện nguyên lý:         kicad/schematic-library.md
+      - Thư viện PCB:               kicad/pcb-library.md
+      - Thủ thuật & mẹo:            kicad/tips-and-tricks.md
+  - Bản quyền:                      license.md
+  - Đóng góp:                       contributor.md
+
